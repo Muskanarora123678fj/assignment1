@@ -1,0 +1,28 @@
+package ajpLAB;
+public class EvenOddNumbers {
+
+    // Main method to execute the program
+    public static void main(String[] args) {
+        int limit = 20; // Define the limit up to which odd and even numbers will be printed
+
+        // Print even numbers up to the specified limit
+        System.out.println("Even numbers up to " + limit + ":");
+        for (int i = 1; i <= limit; i++) {
+            // Check if the number is even
+            if (i % 2 == 0) {
+                System.out.print(i + " "); // Print the even number
+            }
+        }
+        System.out.println(); // Print a newline after listing even numbers
+
+        // Print odd numbers up to the specified limit
+        System.out.println("Odd numbers up to " + limit + ":");
+        for (int i = 1; i <= limit; i++) {
+            // Check if the number is odd
+            if (i % 2 != 0) {
+                System.out.print(i + " "); // Print the odd number
+            }
+        }
+        System.out.println(); // Print a newline after listing odd numbers
+    }
+}

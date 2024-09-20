@@ -1,0 +1,39 @@
+class Point {
+    // Attributes
+    private int x;
+    private int y;
+
+    // Constructor to initialize point
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    // Copy constructor
+    public Point(Point other) {
+        this.x = other.x;
+        this.y = other.y;
+    }
+
+    // Method to display the point coordinates
+    public void display() {
+        System.out.println("Point(" + x + ", " + y + ")");
+    }
+}
+
+public class PointDemo {
+    public static void main(String[] args) {
+        // Create a Point object
+        Point point1 = new Point(5, 10);
+        
+        // Use the copy constructor to create a new Point object
+        Point point2 = new Point(point1);
+
+        // Display both points
+        System.out.println("Original Point:");
+        point1.display();
+        
+        System.out.println("Copied Point:");
+        point2.display();
+    }
+}

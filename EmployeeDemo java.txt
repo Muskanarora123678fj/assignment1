@@ -1,0 +1,57 @@
+class Employee {
+    // Attributes
+    protected String name;
+    protected int id;
+    protected double salary;
+
+    // Constructor
+    public Employee(String name, int id, double salary) {
+        this.name = name;
+        this.id = id;
+        this.salary = salary;
+    }
+
+    // Method to display employee details
+    public void displayEmployeeDetails() {
+        System.out.println("Employee Name: " + name);
+        System.out.println("Employee ID: " + id);
+        System.out.println("Employee Salary: $" + salary);
+    }
+}
+
+class Manager extends Employee {
+    // Additional attribute for bonus
+    private double bonus;
+
+    // Constructor
+    public Manager(String name, int id, double salary, double bonus) {
+        super(name, id, salary); // Call the superclass (Employee) constructor
+        this.bonus = bonus;
+    }
+
+    // Method to display manager details
+    public void displayManagerDetails() {
+        displayEmployeeDetails(); // Call the method from Employee class
+        System.out.println("Manager Bonus: $" + bonus);
+    }
+}
+
+public class EmployeeDemo {
+    public static void main(String[] args) {
+        // Creating an Employee object
+        Employee employee = new Employee("Alice Johnson", 101, 50000);
+        
+        // Creating a Manager object
+        Manager manager = new Manager("Bob Smith", 102, 70000, 5000);
+        
+        // Displaying details of the employee
+        System.out.println("Employee Details:");
+        employee.displayEmployeeDetails();
+        
+        // Displaying details of the manager
+        System.out.println("\nManager Details:");
+        manager.displayManagerDetails();
+    }
+}
+
+
